@@ -11,27 +11,29 @@ Schedule the execution of threads in a round-robin fashion<br />
 Provide a synchronization mechanism for threads to join other threads<br />
 Be preemptive, that is to provide an interrupt-based scheduler<br />
 
-## Phase: 1
+## Phase: 1 | Queue Implementation
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Queue functions are <br />
 
 
-## Phase: 2
+## Phase: 2 | Thread Control Block (TCB) Implementation 
 
-Explain what these tests test and why
+uthread_create() <br />
+uthread_yield() <br />
+uthread_start() <br />
+uthread_block() <br />
+uthread_unblock() <br />
+uthread_exit() <br />
 
-```
-Give an example
-```
 
-## Phase: 3
+## Phase: 3 | uthread_join() Implementation 
 
-Explain what these tests test and why
+uthread_join()
 
 ## Phase: 4
 
 ### Authors
 
-* **Harshil Shah** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-* **Aashay Wadnagara** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Harshil Shah** 
+* **Aashay Wadnagara** 
 
