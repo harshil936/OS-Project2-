@@ -16,7 +16,7 @@ Be preemptive, that is to provide an interrupt-based scheduler<br />
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 
-### Phase: 2
+## Phase: 2
 
 Explain what these tests test and why
 
@@ -24,13 +24,13 @@ Explain what these tests test and why
 Give an example
 ```
 
-### Phase: 3
+## Phase: 3
 
 Explain what these tests test and why
 
 ## Phase: 4
 
-## Authors
+### Authors
 
 * **Harshil Shah** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
 * **Aashay Wadnagara** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
