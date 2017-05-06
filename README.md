@@ -74,6 +74,7 @@ uthread_join()
 ### References
 
 - https://gist.github.com/mycodeschool/7510222 (our queue structure was heavily based on this)
-- https://github.com/twcamper/c-programming/blob/master/lib/bounded-queue.c (another source for examples of queue functions)
 - http://stackoverflow.com/questions/1152246/mutual-exclusion-using-testandset-instruction (provided example on dealing with critical section)
-- https://github.com/pb376/cs4411-p5/blob/master/PortOSWin/synch.c (provided an example on how to do semaphore)
+- https://github.com/twcamper/c-programming/blob/master/lib/bounded-queue.c (another source for examples of queue functions)
+- https://raw.githubusercontent.com/hpatel3006/Pro2-1 (For syntax support in C )
+ 
