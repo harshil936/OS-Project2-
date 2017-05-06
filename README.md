@@ -1,6 +1,15 @@
-# Project Title
+# Project 2
 
-One Paragraph of project description goes here
+The goal of this project is to understand the idea of threads, by implementing a basic 
+user-level thread library for Linux. The library will provide a complete interface for 
+applications to create and run independent threads concurrently.
+
+Some Requirements are:
+
+Create new threads
+Schedule the execution of threads in a round-robin fashion
+Provide a synchronization mechanism for threads to join other threads
+Be preemptive, that is to provide an interrupt-based scheduler
 
 ## Getting Started
 
