@@ -33,7 +33,7 @@ queue_enqueue() : To enqueue, we reroute the tail pointer of the queue and set <
 the pointer of the new node to NULL. <br /> 
 queue_dequeue() : To dequeue, we reroute the head using a temporary pointer to <br /> 
 the next node of the head and assign the queue element data to the data <br /> 
-passed as argument. 
+passed as argument. <br /> 
 queue_delete() : To delete, we parse through the queue for the appropriate data, <br />  
 and free up that memeory by reassigning the respective pointers. <br /> 
 queue_iterate() : To iterate, we applied the function passed in the paramenter, <br /> 
