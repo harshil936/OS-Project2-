@@ -43,14 +43,27 @@ counting elements and returned the total. <br />
 
 #### Testing of queue
 In order to test our queue implemntation, we wrote of test file. In this file we <br /> 
-used assert() function to check if our queue is returning the correct return value <br /> 
-to its function call. One of the way we checked our queue is by using different number <br /> 
-of queue_enqueue() followed by the same number of queue_dequeue(). This way we <br /> 
-ended up with the empty queue. Also, We tried subjecting the queue to invalid elements <br /> 
-in order to make sure it does not lose objects or crash. <br /> 
+used assert() function to check if our queue is returning the correct return <br />
+value to its function call. One of the way we checked our queue is by using <br />
+different number of queue_enqueue() followed by the same number of <br />
+queue_dequeue(). This way we ended up with the empty queue. Also, We tried <br />
+subjecting the queue to invalid elements in order to make sure it does <br />
+not lose objects or crash. <br /> 
 
 
 ## Phase: 2 | Thread Control Block (TCB) Implementation 
+
+So we as a group, we started on working at different functions at the <br />
+same time. We started from implementing the uthread_start() function and <br />
+uthread_yield() function of uthread library. We created four global queues <br />
+for running, ready, blocked and zombie for different stated of the thread <br />
+life cycle. Eventhough, there was only one thread running at a time, we still <br />
+made a queue for the running state because it made our implemetation easier. <br />
+
+For uthread_start, we were very comfused as how to use contexts and the stack and how do to the various functions in the context.h files work. We started by putting most of the yield function in the start function. When we started to understand how the program would work, we started with an initial thread, that hold the context for the current context and after calling the create function using the arguments we let the yield function handle the rest. 
+For the create function, we simply set the values for the context using the passes func and arg arguments. We the enqueue it to the waiting queue.
+In the exit function, we update some queues and states an call teh yield function. 
+The bulk of the work is done in the yield function, where its main job is to get elelments from the waiting queue and switch their contexts. 
 
 uthread_create() <br />
 uthread_yield() <br />
@@ -65,6 +78,8 @@ uthread_exit() <br />
 uthread_join()
 
 ## Phase: 4 | Preemption
+
+We could not reached to this phase of the project :(
 
 ### Authors
 
