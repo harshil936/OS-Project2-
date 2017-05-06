@@ -96,7 +96,12 @@ queue and setting it current state to running.<br />
 
 ## Phase: 3 | uthread_join() Implementation 
 
-uthread_join()
+For this part of the project our goal was implement uthread_join() <br />
+function to merge the parent or main thread into the child thread. If <br />
+the running thread is zombie then join the main thread. If the child <br />
+thread is still runnning then out the main thread into block queue <br />
+for the wait until the child thread is completed. <br />
+<br />
 
 ## Phase: 4 | Preemption
 
