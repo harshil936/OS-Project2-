@@ -110,12 +110,16 @@ We could not reached to this phase of the project :(
 ### Authors
 
 * **Harshil Shah** 
-* **Aashay Wadnagara** 
+* **Aashay Vadnagara** 
 
 ### References
 
-- https://gist.github.com/mycodeschool/7510222 (our queue structure was heavily based on this)
-- http://stackoverflow.com/questions/1152246/mutual-exclusion-using-testandset-instruction (provided example on dealing with critical section)
-- https://github.com/twcamper/c-programming/blob/master/lib/bounded-queue.c (another source for examples of queue functions)
-- https://raw.githubusercontent.com/hpatel3006/Pro2-1 (For syntax support in C )
+- https://gist.github.com/mycodeschool/7510222 <br />
+(our queue structure was heavily based on this)<br />
+- http://stackoverflow.com/questions/1152246/mutual-exclusion-using-testandset-instruction 
+<br />(provided example on dealing with critical section)<br />
+- https://github.com/twcamper/c-programming/blob/master/lib/bounded-queue.c <br />
+(another source for examples of queue functions)<br />
+- https://raw.githubusercontent.com/hpatel3006/Pro2-1 <br />
+(For syntax support in C )<br />
  
