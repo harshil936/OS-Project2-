@@ -53,25 +53,46 @@ not lose objects or crash. <br />
 
 ## Phase: 2 | Thread Control Block (TCB) Implementation 
 
-So we as a group, we started on working at different functions at the <br />
-same time. We started from implementing the uthread_start() function and <br />
-uthread_yield() function of uthread library. We created four global queues <br />
-for running, ready, blocked and zombie for different stated of the thread <br />
-life cycle. Eventhough, there was only one thread running at a time, we still <br />
-made a queue for the running state because it made our implemetation easier. <br />
-
-For uthread_start, we were very comfused as how to use contexts and the stack and how do to the various functions in the context.h files work. We started by putting most of the yield function in the start function. When we started to understand how the program would work, we started with an initial thread, that hold the context for the current context and after calling the create function using the arguments we let the yield function handle the rest. 
-For the create function, we simply set the values for the context using the passes func and arg arguments. We the enqueue it to the waiting queue.
-In the exit function, we update some queues and states an call teh yield function. 
-The bulk of the work is done in the yield function, where its main job is to get elelments from the waiting queue and switch their contexts. 
-
+List of the functions that we implemented during this phase are: <br />
 uthread_create() <br />
 uthread_yield() <br />
 uthread_start() <br />
 uthread_block() <br />
 uthread_unblock() <br />
 uthread_exit() <br />
-
+<br />
+So we as a group, we started on working at different functions at the <br />
+same time. We started from implementing the uthread_start() function and <br />
+uthread_yield() function of uthread library. We created four global queues <br />
+for running, ready, blocked and zombie for different stated of the thread <br />
+life cycle. Eventhough, there was only one thread running at a time, we still <br />
+made a queue for the running state because it made our implemetation easier. <br />
+<br />
+For the implementation of uthread_start() function, we weren't sure <br />
+about how to handle the contexts and the stack and how do to the various <br />
+functions in the context.h files work. However, we googled inorder to see <br />
+different examples where they use this similar functions. We also have <br />
+private data structure to hold data memebers like TID, State, Stack <br />
+Pointer, Context, Thread state using the data-type such as uthread_t <br />
+and uthread_func_t. We also implemented global running thread to keep <br />
+track of what is being run. <br />
+<br />
+For the uthread_create() function, we checked if ready has any elements.<br /> 
+If not then we called uthread_init() function which initializes the <br />
+queues and the main thread. If there are elements in the ready queue, <br />
+then the we just create a new thread and enqueue it in the ready queue <br />
+by setting it state to the ready. <br />
+<br />
+In the exit function, we created a temporary thread to store the TCB <br />
+values from the running thread. Then we set the current state of that <br />
+thread to zombie and enqueue it into zombie queue.<br />
+<br />
+In the uthread_yield() function, we gave the chance to the threads <br />
+that are in the ready queue to be executed by dequeueing the thread <br />
+from the running queue and enqueueing it back into the ready queue. <br />
+After dequeue thread from the ready and enqueuing it into the running <br />
+queue and setting it current state to running.<br />
+<br />
 
 ## Phase: 3 | uthread_join() Implementation 
 
