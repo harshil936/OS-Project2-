@@ -1,4 +1,4 @@
-# Project 2
+# Project 2 | # Thread Life Cycle 
 
 The goal of this project is to understand the idea of threads, by <br />
 implementing a basic user-level thread library for Linux. The library will  <br />
